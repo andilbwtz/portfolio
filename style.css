@@ -1,0 +1,334 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat: 100,200,300,400,500,600,700,800,900');
+
+/* body */
+body {
+	background-color: #f6f6fb;
+}
+
+/* header */
+header {
+	display: block;
+	overflow: hidden;
+	margin-top: 2.5%;
+	margin-bottom: 0px;
+}
+
+/* logo */
+img {
+	align: left;
+	margin-left: 3%;
+	position: fixed;
+}
+
+#Logo {
+	float: left;
+}
+
+/* menu */
+.nav {
+	right: 0;
+	list-style: none;
+	text-align: left;
+	margin-right: 3%;
+	margin-top: 3%;
+	font-family: oswald;
+	font-weight: 100;
+	font-size: 1.15em;
+	color: black;
+	text-decoration: none;
+	position: fixed;
+}
+
+.nav > li {
+	display: Inline-block;
+	padding-left: 30px;
+	color: black;
+}
+
+/* footer */
+h4 {
+	align: left;
+	margin-left: 3%;
+	float: left;
+	text-align: left;
+	font-family: Oswald;
+	font-weight: 100;
+	font-size: 1em;
+	color: black;
+	text-decoration: none;
+	margin-top: 6%;
+}
+
+.sitemap {
+	right: 0;
+	float: right;
+	margin-right: 2.5%;
+	list-style: none;
+	text-align: left;
+	font-family: Oswald;
+	font-weight: 100;
+	font-size: 1em;
+	color: black;
+	text-decoration: none;
+	margin-top: 6%;
+}
+
+.sitemap > li {
+	display: Inline-block;
+	padding-left: 30px;
+	color: black;
+}
+
+/* h1 */
+h1 {
+	font-family: Prospectus Pro L;
+	font-weight: 100;
+	font-size: 3.25em;
+	line-height: 1.5em;
+}
+
+.italicize {
+	font-family: Prospectus Pro L;
+	font-weight: 400;
+	line-height: 1.5em;
+}
+
+/* "selected projects" */
+h2 {
+	font-family: Oswald;
+	font-weight: 100;
+	font-size: 1.75em;
+}
+
+/* project title */
+h3 {
+	font-family: Prospectus Pro L;
+	font-weight: black;
+	font-size: 3.25em;
+	margin-left: 50px;
+	margin-top: 30px;
+}
+
+/* project description */
+p {
+	font-family: Oswald;
+	font-weight: 100;
+	font-size: 1.25em;
+	margin-left: 61px;
+	margin-top: -55px;
+}
+
+/* section */
+section {
+	display: block;
+	margin-left: 3%;
+	margin-top: 8%;
+	margin-right: 15%;
+	overflow: hidden;
+}
+
+/* intro */
+#intro {
+	margin-top: 12%;
+}
+
+/* hover text */
+.underlined {
+  color: black;
+  flex: 1;
+  font-size: 1em;
+  font-weight: 900;
+  text-decoration: none;
+  background-position: 0 1.2em;
+  background-size: 0 150%;
+  background-repeat: no-repeat;
+  transition: background .5s;
+}
+
+.underlined:hover {
+  background-size: 100% 150%;
+  color: #f6f6fb;
+}
+
+.underlined--blue {
+  background-position: 0 -0.1em;
+  background-image: linear-gradient(to right, #5ec8d2, #5ec8d2);
+}
+
+.underlined--green {
+  background-position: 0 -0.1em;
+  background-image: linear-gradient(to right, #BFD958, #BFD958);
+}
+
+/* strikethrough */
+.back {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(https://pp.userapi.com/c841122/v841122831/327e/nHt-92F6yc4.jpg) no-repeat top center #efeff1;
+  background-size: cover;
+}
+
+nav a {
+  text-decoration: none;
+  color: #16151b;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  transition: all 0.25s cubic-bezier(1, 0, 0.58, 0.97);
+}
+
+nav a:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  top: calc(50% - 1.5px);
+  right: 0;
+  background: #5ec8d2;
+  transition: inherit;
+}
+
+nav a:hover:before {
+  left: 0;
+  width: 100%;
+}
+
+nav a:nth-child(1) {
+  animation: show 0.2s 1.1s ease 1 both;
+}
+nav a:nth-child(2) {
+  animation: show 0.2s 1.2s ease 1 both;
+}
+nav a:nth-child(3) {
+  animation: show 0.2s 1.2s ease 1 both;
+}
+
+/* smooth scrolling */
+html{
+    scroll-behavior: smooth;
+}
+
+/* tooltip 1 */
+.tooltip {
+  position: relative;
+  font-size: 1em;
+  text-transform: none;
+  font-weight: 900;
+}
+
+.tooltip .tooltip-image1 {
+  visibility: hidden;
+  max-width: 50px;
+  max-height: 100px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 100%;
+  opacity: 0;
+  transition: .3s;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.tooltip .tooltip-image1::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+}
+
+.tooltip:hover .tooltip-image1 {
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+/* tooltip 2-3 */
+.tooltip .tooltip-image23 {
+  visibility: hidden;
+  max-width: 50px;
+  max-height: 100px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 350%;
+  left: 100%;
+  opacity: 0;
+  transition: .3s;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.tooltip .tooltip-image23::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+}
+
+.tooltip:hover .tooltip-image23 {
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+/* tooltip 4 */
+.tooltip .tooltip-image4 {
+  visibility: hidden;
+  max-width: 50px;
+  max-height: 100px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 350%;
+  left: 25%;
+  opacity: 0;
+  transition: .3s;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.tooltip .tooltip-image4::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+}
+
+.tooltip:hover .tooltip-image4 {
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+/* tooltip 5 */
+.tooltip .tooltip-image5 {
+  visibility: hidden;
+  max-width: 50px;
+  max-height: 100px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 800%;
+  left: 100%;
+  opacity: 0;
+  transition: .3s;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.tooltip .tooltip-image5::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+}
+
+.tooltip:hover .tooltip-image5 {
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
